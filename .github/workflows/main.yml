@@ -1,0 +1,14 @@
+# Note: I'm calling this .yaml instead of .yml to see what Github Actions does
+# OK, .yml needed by the lab tutorial
+
+name: A big old sample workflow for my Hello World homies file
+on: push
+jobs:
+    build:
+        name: Hello world ACTION!
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - uses: ./action-a
+              env:
+                  MY_NAME: "Monara"
